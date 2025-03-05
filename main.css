@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width:100%;
+    max-height: 100%;
+    /* margin: 10px; */
+}
+
+@font-face {
+    font-family: AlteRegular;
+    src: url(AlteHaasGroteskRegular.ttf);
+}
+
+@font-face {
+    font-family: AlteBold;
+    src: url(AlteHaasGroteskBold.ttf);
+}
+
+@font-face {
+    font-family: NeueMontrealRegular;
+    src: url(NeueMontrealRegular.otf);
+}
+
+@font-face {
+    font-family: NeueMontrealBold;
+    src: url(NeueMontreal-Bold.otf);
+}
+
+.p1 {
+    font-family: NeueMontrealRegular;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.p2 {
+    font-family: NeueMontrealBold;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.h1 {
+    font-family: AlteBold;
+    font-size: 50px;
+}
+
+.chessboard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 0;
+}
+
+.piece {
+    /* max-width: 100%; */
+    height: 115px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.piece:hover {
+    transform: rotate(15deg);
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    height: 127px;
+    display: flex;
+    flex-direction: row;
+    /* overflow: hidden; */
+    flex: none;
+}
+
+.squarew {    
+    background: #ffffff;
+    width: 127px;
+    height: 127px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* border: solid 1px black; */
+}
+
+.squareb {
+    background: #000000;
+    width: 127px;
+    height: 127px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* border: solid 1px black; */
+}
+
+.infopanel {
+    background: #FFFFFF;
+    height: 100vh;
+    width: 785px;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    padding: 25px;
+    gap: 25px;
+    border-left: solid 2px black;
+
+    z-index: 2;
+}
+
+.infotitle {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;   
+    
+    /* background: lightgoldenrodyellow;
+    border: 1px solid black; */
+}
+
+.infolinks {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;   
+    gap: 20px;
+    
+    /* background: lightgoldenrodyellow;
+    border: 1px solid black; */
+}
+
+.infobutton {
+    height: 45px;
+    width: 25%;
+    /* background: lightpink; */
+    border: 2px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infobutton:hover {
+    transform: rotate(-6deg);
+    cursor: pointer;
+    background: #FFFFB2;
+}
+
+.infoparagraph {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;   
+    
+    /* background: lightgoldenrodyellow;
+    border: 1px solid black; */
+}
+
+.infoimages {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;  
+    
+    /* background: lightgoldenrodyellow;
+    border: 1px solid black; */
+}
+
+.infoimage {
+    width: 100%;
+    filter: grayscale(100%) contrast(150%);
+}
+
+.infoimage:hover {
+    filter: none;
+}
+
+.logo:hover {
+    transform: rotate(6deg);
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+
+.infopanel {
+    width: 100%
+}
+
+.chessboard {
+    visibility: hidden;
+}
+
+}
+
+@media screen and (max-width:600px) {
+
+.p1 {
+    font-size: 15px;
+}
+
+.p2 {
+    font-size: 15px;
+}
+
+.infopanel {
+    padding: 15px;
+    gap: 15px;
+}
+
+.infobutton {
+    height: 30px;
+}
+
+}
